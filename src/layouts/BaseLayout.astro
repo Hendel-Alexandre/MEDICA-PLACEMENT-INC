@@ -1,6 +1,6 @@
 ---
 import '../styles/normalize.css';
-import '../styles/webflow.css';
+import '../styles/base.css';
 import '../styles/site.css';
 import '../styles/fonts.css';
 import '../styles/ix.css';
@@ -62,13 +62,13 @@ const ogImageUrl = ogImage && Astro.site ? new URL(ogImage, Astro.site).href : o
     {canonical && <link rel="canonical" href={canonical} />}
     {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
     <script is:inline>
-      // Same flags Webflow sets before first paint: `w-mod-js` enables the
-      // "hidden until animated" rules in ix.css, `w-mod-touch` marks touch devices.
+      // Flags set before first paint: `js-on` enables the
+      // "hidden until animated" rules in ix.css, `touch` marks touch devices.
       (function (win, doc) {
         const root = doc.documentElement;
-        root.className += ' w-mod-js';
+        root.className += ' js-on';
         if ('ontouchstart' in win || (win.DocumentTouch && doc instanceof win.DocumentTouch)) {
-          root.className += ' w-mod-touch';
+          root.className += ' touch';
         }
       })(window, document);
     </script>

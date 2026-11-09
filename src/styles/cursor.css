@@ -1,4 +1,4 @@
-/* cursor styles (custom code from the original page) */
+/* cursor styles */
 @media (hover: hover) and (pointer: fine) {
   [data-cursor] .cursor-bubble {
     transition:

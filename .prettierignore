@@ -4,7 +4,7 @@ dist/
 node_modules/
 public/
 package-lock.json
-# Stylesheets exported from Webflow are kept as-is so they stay diffable with the original export.
+# Large stylesheets kept with their own formatting.
 src/styles/normalize.css
-src/styles/webflow.css
+src/styles/base.css
 src/styles/site.css

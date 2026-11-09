@@ -10,7 +10,7 @@ export interface OpeningHoursDay {
   current?: boolean;
 }
 
-/** Centrale de répartition (page Contact), heure de Montréal. */
+/** Heures d’ouverture (page Contact), heure de Montréal. */
 export const openingHours: OpeningHoursDay[] = [
   { day: 'monday', label: 'Lundi', time: '24 h sur 24', open: '00:00', close: '00:00' },
   { day: 'tuesday', label: 'Mardi', time: '24 h sur 24', open: '00:00', close: '00:00' },

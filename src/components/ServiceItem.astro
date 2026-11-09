@@ -8,7 +8,7 @@ const { titleId, textId, title, text, titleAnimate, textAnimate } = Astro.props;
 ---
 
 <div class="service_item">
-  <div class="w-layout-grid grid_12-col">
+  <div class="layout-grid grid_12-col">
     <div id={titleId} class="grid_column">
       <h2 data-animate={titleAnimate} class="heading-size-h4">
         {title.map((line, i) => (i === 0 ? line : [<br />, line]))}

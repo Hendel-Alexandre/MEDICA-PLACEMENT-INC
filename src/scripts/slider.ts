@@ -119,8 +119,7 @@ function initSliders(): void {
 }
 
 /**
- * GSAP "seamless loop" helper (https://gsap.com/docs/v3/HelperFunctions/helpers/seamlessLoop),
- * as used by the original site.
+ * GSAP "seamless loop" helper (https://gsap.com/docs/v3/HelperFunctions/helpers/seamlessLoop).
  */
 function horizontalLoop(itemsInput: HTMLElement[], config: LoopConfig = {}): LoopTimeline {
   let timeline!: LoopTimeline;

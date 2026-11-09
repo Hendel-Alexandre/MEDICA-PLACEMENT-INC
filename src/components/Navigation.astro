@@ -11,7 +11,7 @@ const onHome = isCurrent('/', pathname);
     <div class="nav-full__wrap">
       <a
         href="/"
-        class:list={['nav-full__logo', 'w-inline-block', { 'w--current': onHome }]}
+        class:list={['nav-full__logo', 'link-block', { 'w--current': onHome }]}
         aria-current={onHome ? 'page' : undefined}
         aria-label="Médica Placement, accueil"
       >
@@ -51,7 +51,7 @@ const onHome = isCurrent('/', pathname);
             <li class="nav-full__li">
               <a
                 href={link.href}
-                class:list={['nav-full__link', 'w-inline-block', { 'is--current w--current': current }]}
+                class:list={['nav-full__link', 'link-block', { 'is--current w--current': current }]}
                 aria-current={current ? 'page' : undefined}
               >
                 <span data-button-animate-chars="" class="nav-full__link-text">

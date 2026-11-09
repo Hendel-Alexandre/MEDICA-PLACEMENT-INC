@@ -9,33 +9,21 @@ export interface ProcessStep {
 /** Comment une demande avance (page Services). */
 export const processSteps: ProcessStep[] = [
   {
-    ids: [
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01547-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af0154a-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af0154e-9fc0289c',
-    ],
+    ids: ['g-30', 'g-31', 'g-32'],
     number: '01',
-    title: 'Vous déposez le besoin',
-    text: 'Titre d’emploi, milieu, quart, durée, contraintes. Par téléphone pour une urgence, par écrit pour une planification.',
+    title: 'Vous nous appelez',
+    text: 'Dites-nous qui il vous faut, où, quand et pour combien de temps. Appelez-nous pour une urgence, ou écrivez-nous pour planifier.',
   },
   {
-    ids: [
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01554-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01557-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af0155b-9fc0289c',
-    ],
+    ids: ['g-33', 'g-34', 'g-35'],
     number: '02',
-    title: 'La répartition confirme',
-    text: 'La faisabilité et le créneau sont confirmés, puis un professionnel dont le dossier est complet est affecté.',
+    title: 'Nous trouvons la bonne personne',
+    text: 'Nous vous confirmons rapidement, puis nous vous envoyons un professionnel dont le dossier est complet.',
   },
   {
-    ids: [
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01561-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01564-9fc0289c',
-      'w-node-a656f15f-7a59-bd1d-9a1a-233f5af01568-9fc0289c',
-    ],
+    ids: ['g-36', 'g-37', 'g-38'],
     number: '03',
-    title: 'Transport et suivi',
-    text: 'Au besoin, un chauffeur de l’agence assure le transport vers le milieu. Feuille de temps, paie et facturation sont traitées au siège.',
+    title: 'Nous nous occupons du reste',
+    text: 'Au besoin, notre chauffeur conduit la personne jusqu’à vous. Nous gérons la feuille de temps, la paie et la facture.',
   },
 ];

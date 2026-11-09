@@ -1,8 +1,8 @@
-/* Hide animated elements until the GSAP interactions are ready (html.w-mod-ix3 is added by src/scripts/interactions.ts) */
-html.w-mod-js:not(.w-mod-ix3) :is([data-fit-width]) {
+/* Hide animated elements until the GSAP animations are ready (html.ix-ready is added by src/scripts/interactions.ts) */
+html.js-on:not(.ix-ready) :is([data-fit-width]) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3)
+html.js-on:not(.ix-ready)
   :is(
     [data-fit-width],
     [data-animate='about'],
@@ -14,7 +14,7 @@ html.w-mod-js:not(.w-mod-ix3)
   ) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3)
+html.js-on:not(.ix-ready)
   :is(
     [data-fit-width],
     [data-animate='service-01'],
@@ -26,82 +26,80 @@ html.w-mod-js:not(.w-mod-ix3)
   ) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='typo']) {
+html.js-on:not(.ix-ready):is([data-animate='typo']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='typo']) * {
+html.js-on:not(.ix-ready):is([data-animate='typo']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='about']) {
+html.js-on:not(.ix-ready):is([data-animate='about']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='about']) * {
+html.js-on:not(.ix-ready):is([data-animate='about']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='bolt']) {
+html.js-on:not(.ix-ready):is([data-animate='bolt']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='bolt']) * {
+html.js-on:not(.ix-ready):is([data-animate='bolt']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub']) {
+html.js-on:not(.ix-ready):is([data-animate='sub']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub']) * {
+html.js-on:not(.ix-ready):is([data-animate='sub']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-01']) {
+html.js-on:not(.ix-ready):is([data-animate='team-01']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-01']) * {
+html.js-on:not(.ix-ready):is([data-animate='team-01']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-02']) {
+html.js-on:not(.ix-ready):is([data-animate='team-02']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-02']) * {
+html.js-on:not(.ix-ready):is([data-animate='team-02']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-03']) {
+html.js-on:not(.ix-ready):is([data-animate='team-03']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-03']) * {
+html.js-on:not(.ix-ready):is([data-animate='team-03']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='service-01']) {
+html.js-on:not(.ix-ready):is([data-animate='service-01']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='service-01']) * {
+html.js-on:not(.ix-ready):is([data-animate='service-01']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-1']) {
+html.js-on:not(.ix-ready):is([data-animate='sub-1']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-1']) * {
+html.js-on:not(.ix-ready):is([data-animate='sub-1']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-2']) {
+html.js-on:not(.ix-ready):is([data-animate='sub-2']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-2']) * {
+html.js-on:not(.ix-ready):is([data-animate='sub-2']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-12']) {
+html.js-on:not(.ix-ready):is([data-animate='sub-12']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-12']) * {
+html.js-on:not(.ix-ready):is([data-animate='sub-12']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-22']) {
+html.js-on:not(.ix-ready):is([data-animate='sub-22']) {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-22']) * {
+html.js-on:not(.ix-ready):is([data-animate='sub-22']) * {
   visibility: hidden !important;
 }
-html.w-mod-js:not(.w-mod-ix3)
+html.js-on:not(.ix-ready)
   :is(
-    [data-wf-component-id='a321751e-d326-24fb-adbb-cf225c8600ef']:is([data-fit-width]),
-    [data-wf-component-id='a321751e-d326-24fb-adbb-cf225c8600ef'] :is([data-fit-width]),
     .preloader_signet,
     .bolt.preloader_01,
     .bolt.preloader_02,

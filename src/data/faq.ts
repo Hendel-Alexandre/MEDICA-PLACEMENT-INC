@@ -6,66 +6,63 @@ export interface Faq {
 /** Questions fréquentes (page Contact, section « FAQ »). */
 export const faqs: Faq[] = [
   {
-    question: 'Êtes-vous une agence de placement autorisée?',
+    question: 'Êtes-vous une agence autorisée?',
+    answer: 'Oui. Nous avons le permis d’agence de placement de personnel de la CNESST, avec un cautionnement.',
+  },
+  {
+    question: 'Quels types de postes offrez-vous?',
     answer:
-      'Oui. Médica Placement inc. est titulaire du permis d’agence de placement de personnel délivré par la CNESST, avec police de cautionnement.',
+      'Infirmières et infirmiers, infirmières et infirmiers auxiliaires, et préposés aux bénéficiaires. Nous engageons aussi des chauffeurs pour le transport de notre personnel.',
   },
   {
-    question: 'Quels titres placez-vous?',
+    question: 'Dans quels milieux travaillez-vous?',
+    answer: 'Hôpitaux, CISSS et CIUSSS, CHSLD publics et privés, résidences pour aînés, CLSC et soins à domicile.',
+  },
+  {
+    question: 'Pouvez-vous m’aider en urgence?',
     answer:
-      'Infirmières et infirmiers, infirmières et infirmiers auxiliaires, préposés aux bénéficiaires. Les chauffeurs sont employés pour le pôle logistique, ils ne sont pas du personnel soignant.',
+      'Oui. Nous répondons 24/7, pour un quart de jour, de soir, de nuit ou de fin de semaine. Nous offrons aussi des mandats plus longs.',
   },
   {
-    question: 'Quels milieux?',
+    question: 'Qui paie le personnel?',
     answer:
-      'Centres hospitaliers et installations des CISSS et CIUSSS, CHSLD publics et privés, RPA, CLSC, soins à domicile.',
+      'Nous. Le personnel travaille pour Médica Placement. Nous gérons les feuilles de temps et la paie, puis nous vous envoyons une facture.',
   },
   {
-    question: 'Faites-vous de l’urgence?',
+    question: 'Vérifiez-vous les candidats?',
     answer:
-      'Oui. Remplacement 24 h sur 24, 7 jours sur 7, quarts de jour, de soir, de nuit et de fin de semaine, en plus d’assignations contractuelles.',
+      'Oui, toujours. Nous vérifions l’inscription à l’OIIQ ou à l’OIIAQ, les antécédents judiciaires et les formations RCR et PDSB.',
   },
   {
-    question: 'Le personnel est-il employé de l’agence?',
-    answer: 'Oui. L’agence gère les feuilles de temps, la paie et la facturation à l’établissement.',
-  },
-  {
-    question: 'Vérifiez-vous les ordres?',
-    answer: 'Oui. Inscription à l’OIIQ ou à l’OIIAQ selon le titre, antécédents judiciaires, RCR et PDSB à jour.',
-  },
-  {
-    question: 'Transportez-vous les employés?',
+    question: 'Offrez-vous le transport?',
     answer:
-      'Oui, lorsque le service est retenu, notamment la nuit ou vers une zone excentrée. Au démarrage, les chauffeurs utilisent leur véhicule personnel, avec permis SAAQ et assurance commerciale vérifiés.',
+      'Oui, si vous le demandez, surtout la nuit ou pour les endroits éloignés. Nos chauffeurs ont un permis valide et une assurance, que nous vérifions.',
   },
   {
-    question: 'Faites-vous du transport ambulancier?',
+    question: 'Faites-vous du transport en ambulance?',
     answer:
-      'Non. L’accompagnement de bénéficiaires est non médicalisé : rendez-vous ou transfert. Ce n’est pas un service préhospitalier d’urgence.',
+      'Non. Nous accompagnons des patients à un rendez-vous ou lors d’un transfert, sans soins médicaux. Ce n’est pas un service d’urgence.',
   },
   {
     question: 'Recrutez-vous à l’étranger?',
-    answer: 'Non. Bassin local uniquement. Pas de permis ARTE.',
-  },
-  {
-    question: 'Êtes-vous membres d’ACSESS?',
-    answer: 'Non, pas à ce stade. L’adhésion est volontaire.',
+    answer: 'Non. Nous recrutons seulement des gens d’ici.',
   },
   {
     question: 'Avez-vous un bureau ouvert au public?',
-    answer: 'Non. Pas de bail commercial. Répartition et administration en télétravail depuis le siège social.',
+    answer: 'Non. Notre équipe travaille à distance. Le plus simple est de nous appeler.',
   },
   {
-    question: 'Puis-je postuler sans numéro d’ordre?',
-    answer: 'Seulement si le titre n’exige pas d’ordre (PAB, chauffeur). Un dossier incomplet n’est pas affecté.',
-  },
-  {
-    question: 'Facturez-vous les candidats?',
-    answer: 'Non. Aucuns frais au travailleur pour le recrutement ou l’affectation.',
-  },
-  {
-    question: 'Êtes-vous déjà en opération?',
+    question: 'Puis-je postuler sans être membre d’un ordre?',
     answer:
-      'L’entreprise est en déploiement. Les demandes et les candidatures sont ouvertes. Les premières affectations et paies suivent les premiers contrats de services.',
+      'Oui, si votre poste n’en demande pas, comme préposé(e) aux bénéficiaires ou chauffeur. Votre dossier doit être complet avant votre premier mandat.',
+  },
+  {
+    question: 'Dois-je payer pour postuler?',
+    answer: 'Non. C’est gratuit, du début à la fin.',
+  },
+  {
+    question: 'Avez-vous commencé vos activités?',
+    answer:
+      'Nous démarrons. Les établissements peuvent déjà nous envoyer leurs demandes, et les candidats peuvent postuler dès maintenant.',
   },
 ];

@@ -11,7 +11,7 @@ export function organizationJsonLd(siteUrl: URL | undefined) {
     name: site.name,
     legalName: site.legalName,
     description:
-      'Agence québécoise de dotation, de placement et de logistique pour le réseau de la santé. Main-d’œuvre locale qualifiée, répartition 24/7, transport intégré vers les milieux de soins.',
+      'Agence de placement de personnel de santé au Québec. Infirmières, infirmières auxiliaires et préposés aux bénéficiaires, service 24/7 et transport du personnel.',
     telephone: site.phone.international,
     areaServed: { '@type': 'AdministrativeArea', name: 'Québec' },
     knowsLanguage: 'fr-CA',

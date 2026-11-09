@@ -8,7 +8,7 @@ export interface ResponsiveImage {
 }
 
 export interface Insight {
-  /** Grid-area id kept from the original export (site.css positions the card with it). */
+  /** Grid-area id (site.css positions the card with it). */
   gridId: string;
   href: string;
   image: ResponsiveImage;
@@ -23,7 +23,7 @@ export interface Insight {
 /** Les trois portes de l’accueil : établissements, professionnels, conformité. */
 export const insights: Insight[] = [
   {
-    gridId: 'w-node-_43565458-c976-d1f2-4ff3-365f69a35247-6bfbca1a',
+    gridId: 'g-27',
     href: '/contact',
     image: photo(
       'clinic-bp',
@@ -32,29 +32,29 @@ export const insights: Insight[] = [
     ),
     category: 'Pour les établissements',
     date: 'Demander du personnel',
-    title: 'Un besoin de personnel? Nous sommes là.',
+    title: 'Besoin de personnel? Nous sommes là.',
     excerpt:
-      'Qu’il s’agisse d’un remplacement urgent, d’un quart planifié ou d’un besoin récurrent, Médica Placement vous accompagne avec des solutions de dotation adaptées à votre réalité.',
+      'Un remplacement urgent, un quart à combler ou un besoin qui revient chaque semaine? Dites-nous ce qu’il vous faut. Nous trouvons la bonne personne.',
     balanceTitle: true,
   },
   {
-    gridId: 'w-node-d9c4726b-45e1-a7ad-6d95-8dec865bcefa-6bfbca1a',
+    gridId: 'g-28',
     href: '/contact',
     image: photo('nurse-smile', 'Une infirmière souriante en uniforme.', '(max-width: 991px) 90vw, 30vw'),
     category: 'Pour les professionnels',
-    date: 'Soumettre ma candidature',
-    title: 'Votre expertise mérite les bonnes opportunités.',
+    date: 'Postuler',
+    title: 'Trouvez le poste qui vous convient.',
     excerpt:
-      'Infirmière, infirmière auxiliaire, préposé(e) aux bénéficiaires ou chauffeur : joignez-vous à notre réseau. Aucun frais n’est exigé des candidats pour le recrutement ou l’affectation.',
+      'Infirmière, infirmière auxiliaire, préposé(e) aux bénéficiaires ou chauffeur? Joignez-vous à notre équipe. Postuler est gratuit, du début à la fin.',
   },
   {
-    gridId: 'w-node-_6c9d2a78-8ae6-f60f-81eb-4f8a91c82bdc-6bfbca1a',
+    gridId: 'g-29',
     href: '/a-propos',
     image: photo('nurse-masks', 'Une infirmière ausculte une collègue.', '(max-width: 991px) 90vw, 30vw'),
-    category: 'Conformité et permis',
+    category: 'Une agence en règle',
     date: 'CNESST',
-    title: 'La conformité au cœur de nos engagements.',
+    title: 'Vous pouvez nous faire confiance.',
     excerpt:
-      'Médica Placement détient le permis d’agence de placement de personnel délivré par la CNESST, dispose d’une police de cautionnement et est inscrite à l’Autorité des marchés publics.',
+      'Nous avons le permis d’agence de placement de la CNESST. Nous avons aussi un cautionnement et sommes inscrits à l’Autorité des marchés publics.',
   },
 ];

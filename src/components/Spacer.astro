@@ -1,10 +1,9 @@
 ---
-// Vertical spacer (Webflow "Spacer" component). Non-default variants carry the generated
-// variant class that site.css styles.
+// Vertical spacer. Non-default sizes add the variant class that site.css styles.
 const VARIANT_CLASS = {
   main: undefined,
-  xsmall: 'w-variant-928640bc-574e-d92e-c351-f4ecd8130145',
-  xlarge: 'w-variant-7ee17b9b-7340-ac0d-ef05-8a86e0a98813',
+  xsmall: 'variant-1',
+  xlarge: 'variant-2',
 } as const;
 
 interface Props {
@@ -14,4 +13,4 @@ interface Props {
 const { variant = 'main' } = Astro.props;
 ---
 
-<div data-wf--spacer--variant={variant} class:list={['section_space', VARIANT_CLASS[variant]]}></div>
+<div data-spacer={variant} class:list={['section_space', VARIANT_CLASS[variant]]}></div>

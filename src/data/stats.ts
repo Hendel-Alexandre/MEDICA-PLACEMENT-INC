@@ -9,27 +9,18 @@ export interface Stat {
 /** Chiffres clés (page À propos) : uniquement des faits vérifiables. */
 export const stats: Stat[] = [
   {
-    ids: [
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a8e-a6a0f880',
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a91-a6a0f880',
-    ],
+    ids: ['g-47', 'g-48'],
     value: '4',
-    text: 'Piliers dans une même entreprise : recrutement, placement, logistique et répartition.',
+    text: 'Services sous un même toit : recrutement, placement, transport et service 24/7.',
   },
   {
-    ids: [
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a97-a6a0f880',
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a9a-a6a0f880',
-    ],
+    ids: ['g-49', 'g-50'],
     value: '24/7',
-    text: 'Centrale de répartition pour les demandes d’affectation, 24 h sur 24 et 7 jours sur 7.',
+    text: 'Une personne vous répond, jour et nuit, 7 jours sur 7.',
   },
   {
-    ids: [
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99aa0-a6a0f880',
-      'w-node-_703d0e41-a74b-1d30-0676-bc64bdb99aa3-a6a0f880',
-    ],
+    ids: ['g-51', 'g-52'],
     value: '0 $',
-    text: 'Frais demandés aux candidats pour être recrutés, formés ou affectés.',
+    text: 'C’est ce que ça coûte aux candidats pour postuler et travailler avec nous.',
   },
 ];

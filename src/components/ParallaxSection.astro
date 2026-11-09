@@ -3,6 +3,7 @@
 // Le slot par défaut remplit la rangée du bas ; le slot « middle » remplit la rangée du milieu.
 // Avec une photo : texte blanc sur un dégradé marine (voir .is_photo dans global.css).
 // Sans photo : fond aqua de la marque, texte marine (.is_aqua).
+// Avec `white` : fond blanc uni, texte marine, sans image (.is_aqua.is_white).
 import type { ResponsiveImage } from '../data/insights';
 
 interface Props {
@@ -20,6 +21,8 @@ interface Props {
   /** Affiche la rangée du bas (vide, sans conteneur, si aucun contenu n’est fourni). */
   bottom?: boolean;
   noMinHeight?: boolean;
+  /** Fond blanc uni, sans image. */
+  white?: boolean;
 }
 
 const AQUA: ResponsiveImage = {
@@ -38,13 +41,20 @@ const {
   middle = false,
   bottom = true,
   noMinHeight = false,
+  white = false,
 } = Astro.props;
 const photo = image ?? AQUA;
-const isPhoto = Boolean(image);
+const isPhoto = Boolean(image) && !white;
 const hasBottomContent = Astro.slots.has('default');
 ---
 
-<div class:list={['parallax-fullscreen', isPhoto ? 'is_photo' : 'is_aqua', { 'no-min-height': noMinHeight }]}>
+<div
+  class:list={[
+    'parallax-fullscreen',
+    isPhoto ? 'is_photo' : 'is_aqua',
+    { is_white: white, 'no-min-height': noMinHeight },
+  ]}
+>
   {bolts && (
     <div class="parallax-top">
       <div class="container">
@@ -72,21 +82,23 @@ const hasBottomContent = Astro.slots.has('default');
     ) : (
       <div class="parallax-bottom" />
     ))}
-  <div
-    data-parallax="trigger"
-    data-parallax-start="-8"
-    data-parallax-end="8"
-    data-parallax-scrub={scrub}
-    class:list={['parallax-bg', { is_100: tallImage }]}
-  >
-    <img
-      sizes={photo.sizes}
-      srcset={photo.srcset}
-      src={photo.src}
-      loading="lazy"
-      alt={photo.alt}
-      class="parallax-img"
-    />
-    {isPhoto && overlay !== 'none' && <div class:list={['medica-overlay', `is_${overlay}`]} />}
-  </div>
+  {!white && (
+    <div
+      data-parallax="trigger"
+      data-parallax-start="-8"
+      data-parallax-end="8"
+      data-parallax-scrub={scrub}
+      class:list={['parallax-bg', { is_100: tallImage }]}
+    >
+      <img
+        sizes={photo.sizes}
+        srcset={photo.srcset}
+        src={photo.src}
+        loading="lazy"
+        alt={photo.alt}
+        class="parallax-img"
+      />
+      {isPhoto && overlay !== 'none' && <div class:list={['medica-overlay', `is_${overlay}`]} />}
+    </div>
+  )}
 </div>

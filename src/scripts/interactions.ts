@@ -1,8 +1,8 @@
 import { gsap, ScrollTrigger, SplitText } from './gsap';
 
 /*
- * Port of the site's Webflow (IX3) interactions to plain GSAP.
- * Timings, eases and offsets match the original export. Text splits are
+ * Scroll and load animations, built with GSAP.
+ * Text splits are
  * reverted once their reveal has finished so the copy can re-wrap on resize.
  */
 
@@ -19,7 +19,7 @@ function split(selector: string | Element[], type: SplitType) {
   return { pieces, revert: () => splits.forEach((s) => s.revert()) };
 }
 
-/** Scroll trigger that plays once when `trigger` crosses `start` (Webflow "enter: play"). */
+/** Scroll trigger that plays once when `trigger` crosses `start`. */
 function playOnEnter(trigger: Element, start: string): ScrollTrigger.Vars {
   return {
     trigger,
@@ -142,11 +142,11 @@ function setup() {
   servicesIntro();
   footerWordmark();
   // Start states are applied; let ix.css stop hiding the animated elements.
-  document.documentElement.classList.add('w-mod-ix3');
+  document.documentElement.classList.add('ix-ready');
   ScrollTrigger.refresh();
 }
 
-/** Webflow starts its interactions once the page (fonts and images) has fully loaded. */
+/** Animations start once the page (fonts and images) has fully loaded. */
 export function initInteractions(): void {
   const start = () => document.fonts.ready.then(setup);
   if (document.readyState === 'complete') start();

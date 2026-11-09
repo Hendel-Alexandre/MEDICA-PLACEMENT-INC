@@ -13,7 +13,7 @@ function initExpertiseHover(): void {
 
     const tl = gsap.timeline({ paused: true });
     tl.to(overlay, { scaleX: 1, scaleY: 1, duration: 0.7, ease: 'expo.inOut' }, 0)
-      .to(heading, { color: 'var(--green-main)', duration: 0.5, ease: 'expo.inOut' }, 0.1)
+      .to(heading, { color: 'var(--royal)', duration: 0.5, ease: 'expo.inOut' }, 0.1)
       .to(icon, { rotation: 180, duration: 0.7, ease: 'expo.inOut' }, 0.2)
       .to(listItems, { y: '0em', opacity: 1, duration: 0.5, ease: 'expo.inOut', stagger: 0.06 }, 0.3);
 

@@ -27,13 +27,13 @@ npm test             # vérifie dist/ : liens, ancres, fichiers, métadonnées, 
 
 Dans `src/config/site.ts`. Tant qu’une valeur vaut `null`, le site affiche le libellé entre crochets.
 
-| Valeur                  | Champ          | État          |
-| ----------------------- | -------------- | ------------- |
-| Téléphone               | `phone`        | 514 691-0408  |
+| Valeur                  | Champ          | État                      |
+| ----------------------- | -------------- | ------------------------- |
+| Téléphone               | `phone`        | 514 691-0408              |
 | Courriel                | `email`        | medicaplacement@gmail.com |
-| Adresse du siège social | `address`      | `[ADRESSE]`   |
-| Numéro de permis CNESST | `permitNumber` | non affiché   |
-| Hébergeur               | `host`         | `[HÉBERGEUR]` |
+| Adresse du siège social | `address`      | `[ADRESSE]`               |
+| Numéro de permis CNESST | `permitNumber` | non affiché               |
+| Hébergeur               | `host`         | `[HÉBERGEUR]`             |
 
 Domaine définitif : `SITE_URL=https://www.exemple.ca npm run build` (sans lui, pas d’URL canonique).
 
@@ -42,7 +42,7 @@ Domaine définitif : `SITE_URL=https://www.exemple.ca npm run build` (sans lui, 
 - Palette : bleu royal #00269B (fond), marine #170C52, blanc (texte), pervenche #B6CBFD (texte secondaire),
   aqua #95ECE8 (bandeaux et accents), bleu vif #1B56FD (dégradé du pied de page).
 - Logo : le « M » de Médica, tracé en vecteur (`src/components/icons/Signet.astro`).
-- Images : `public/images/medica-*` (photo d’accueil, fond aqua, tuiles, icônes, image de partage).
+- Images : `public/images/medica-*` (photo d’accueil, fond aqua, icônes, image de partage).
 - Police : Carbona (Light, Regular, Medium, Bold). Les fichiers d’essai « Carbona Test » ne contiennent ni
   accents ni ponctuation et ne sont pas licenciés pour un site publié ; en attendant la licence complète, la
   famille « Carbona » est servie par DM Sans (licence OFL). Voir `src/styles/fonts.css` pour brancher Carbona.
@@ -66,17 +66,16 @@ non obligatoire). Fichiers : `public/images/medica-photo-<nom>-<1080|2000>.webp`
 
 | Nom           | Utilisation                                              | Source                                               |
 | ------------- | -------------------------------------------------------- | ---------------------------------------------------- |
-| care-team     | Accueil, bandeau d’introduction                          | pexels.com/photo/6129502 (licence Pexels)            |
 | phone-call    | Accueil, bandeau « au bout du fil »                      | images.unsplash.com/photo-1576091160399-112ba8d25d1d |
 | clinic-bp     | Accueil, carte Établissements ; Contact, bandeau         | images.unsplash.com/photo-1758691462413-b07dee2933fe |
 | nurse-smile   | Accueil, carte Professionnels                            | images.unsplash.com/photo-1741707039536-113e200f9e0d |
 | nurse-masks   | Accueil, carte Conformité                                | images.unsplash.com/photo-1691139601099-932c01ec198b |
 | nurses-duo    | Accueil, service Recrutement                             | images.unsplash.com/photo-1736289162890-78f1ff4f8bd3 |
 | nurse-bedside | Accueil, service Placement ; À propos, profil infirmière | images.unsplash.com/photo-1749065312519-1902cb8431ae |
-| walker-help   | Accueil, service Logistique ; À propos, profil PAB       | images.unsplash.com/photo-1773227055624-07b515ba87c5 |
-| team-corridor | Accueil, service Répartition                             | images.unsplash.com/photo-1516841273335-e39b37888115 |
+| walker-help   | Accueil, service Transport ; À propos, profil PAB       | images.unsplash.com/photo-1773227055624-07b515ba87c5 |
+| team-corridor | Accueil, service Service 24/7                           | images.unsplash.com/photo-1516841273335-e39b37888115 |
 | care-knitting | Services, milieux desservis                              | images.unsplash.com/photo-1762955911769-d652ceaa94bb |
-| care-coloring | Services, logistique                                     | images.unsplash.com/photo-1762955911431-4c44c7c3f408 |
+| care-coloring | Services, transport                                      | images.unsplash.com/photo-1762955911431-4c44c7c3f408 |
 | aide-bp       | À propos, profil infirmière auxiliaire                   | images.unsplash.com/photo-1631815590058-860e4f83c1e8 |
 | night-driver  | À propos, profil chauffeur                               | images.unsplash.com/photo-1584310881889-93bc9c4577ff |
 | nurse-bp      | À propos, bandeau de la promesse                         | images.unsplash.com/photo-1631815590016-ebce183022ce |

@@ -1,4 +1,4 @@
-/* Global custom code embedded in the original pages (overscroll, layout sizing, char-stagger buttons, full-screen navigation) */
+/* Global styles: overscroll, layout sizing, char-stagger buttons, full-screen navigation */
 html,
 body {
   overscroll-behavior: none;
@@ -97,10 +97,6 @@ svg {
 }
 [data-split='heading'] {
   visibility: hidden;
-}
-.wf-design-mode [data-split='heading'],
-.w-editor [data-split='heading'] {
-  visibility: visible !important;
 }
 .text {
   -webkit-text-rendering: optimizeSpeed;
@@ -257,19 +253,26 @@ svg {
 
 /* --------------------------------- Médica : bandeaux aqua --------------------------------- */
 .parallax-fullscreen.is_aqua {
-  color: var(--green-dark);
+  color: var(--navy);
+}
+/* Bandeau blanc uni (accueil, introduction). */
+.parallax-fullscreen.is_white {
+  background-color: #fff;
+}
+.is_white .text-size-xlarge {
+  color: var(--royal);
 }
 .is_aqua .bolt,
 .is_aqua .footer__link-underline {
-  background-color: var(--green-dark);
+  background-color: var(--navy);
 }
 .is_aqua .footer__link,
 .is_aqua .text-color_white,
 .is_aqua .rotating-text__highlight {
-  color: var(--green-dark);
+  color: var(--navy);
 }
 .is_aqua .rotating-text__highlight {
-  color: var(--green-main);
+  color: var(--royal);
 }
 
 /* Barre de navigation au-dessus d’un bandeau aqua : logo et nom en marine. */
@@ -279,10 +282,10 @@ svg {
 }
 .nav-full[data-nav-on-aqua][data-navigation-status='not-active'] .nav-full__logo,
 .nav-full[data-nav-on-aqua][data-navigation-status='not-active'] .nav-full__name {
-  color: var(--green-dark);
+  color: var(--navy);
 }
 
-/* Accueil : le titre français est plus long que l’original ; sous 992 px, les mots
+/* Accueil : le titre est long ; sous 992 px, les mots
    passent à la ligne et leur taille est plafonnée à la largeur de l’écran. */
 @media screen and (max-width: 991px) {
   .hero_heading-wrap {
@@ -381,9 +384,9 @@ svg {
 .service-card__text {
   font-size: 0.95em;
   line-height: 1.45;
-  color: var(--green-light-50);
+  color: var(--light-50);
 }
 .service-card:hover .service-card__text {
-  color: var(--green-dark);
+  color: var(--navy);
   transition: color 0.4s ease;
 }

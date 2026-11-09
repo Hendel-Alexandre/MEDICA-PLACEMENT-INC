@@ -1,5 +1,5 @@
 ---
-// Contact : coordonnées et centrale de répartition (src/scripts/opening-hours.ts), heure de Montréal.
+// Contact : coordonnées et heures d’ouverture (src/scripts/opening-hours.ts), heure de Montréal.
 import OpeningHoursRow from '../../OpeningHoursRow.astro';
 import { openingHours } from '../../../data/opening-hours';
 import { orPlaceholder, site } from '../../../config/site';
@@ -8,13 +8,13 @@ import '../../../styles/opening-hours.css';
 
 <section data-bg-section="light" data-theme-section="light" class="section">
   <div class="container">
-    <div class="w-layout-grid grid_12-col">
-      <div id="w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a7c-b6448a21" class="grid_column full-height">
+    <div class="layout-grid grid_12-col">
+      <div id="g-16" class="grid_column full-height">
         <div class="contact_info">
           <div class="contact_info-link">
             <div class="bolt"></div>
             <div class="footer_l_ink-wrap">
-              <a href={site.phone.href} class="footer__link w-inline-block">
+              <a href={site.phone.href} class="footer__link link-block">
                 <span data-button-animate-chars="" class="footer__link-txt">
                   {site.phone.display}
                 </span>
@@ -24,19 +24,19 @@ import '../../../styles/opening-hours.css';
           </div>
           <div class="max-width-40">
             <p class="text-color_white">
-              Pour une absence à combler cette nuit, utilisez le téléphone. Pour une planification, écrivez à{' '}
+              Besoin de quelqu’un ce soir? Appelez-nous. Pour planifier à l’avance, écrivez-nous à{' '}
               {site.email ? <a href={`mailto:${site.email}`}>{site.email}</a> : orPlaceholder(site.email, 'COURRIEL')}.
             </p>
             <p class="text-color_white">
-              Siège social : {orPlaceholder(site.address, 'ADRESSE')}. Aucun accueil sur place.
+              Siège social : {orPlaceholder(site.address, 'ADRESSE')}. Nous n’avons pas de bureau ouvert au public.
             </p>
           </div>
         </div>
       </div>
-      <div id="w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a80-b6448a21" class="grid_column">
+      <div id="g-17" class="grid_column">
         <div data-opening-hours-timezone="America/Toronto" data-opening-hours-init="" class="opening-hours">
           <div class="opening-hours__top">
-            <h2 class="opening-hours__title">Centrale de répartition</h2>
+            <h2 class="opening-hours__title">Heures d’ouverture</h2>
             <div class="opening-hours__status">
               <div class="opening-hours__status-bg"></div>
               <div class="opening-hours__status-dot"></div>

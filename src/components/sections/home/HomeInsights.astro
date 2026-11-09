@@ -19,7 +19,7 @@ import { insights } from '../../../data/insights';
         </span>
       </div>
     </div>
-    <div class="w-layout-grid grid_12-col">
+    <div class="layout-grid grid_12-col">
       {insights.map(({ gridId, ...insight }) => (
         <div id={gridId} class="grid_column">
           <InsightCard {...insight} />
