@@ -1,0 +1,45 @@
+---
+// Carrousel centré et déplaçable : besoins couverts et titres placés (src/scripts/slider.ts).
+import '../../../styles/slider.css';
+import IconSliderArrow from '../../icons/IconSliderArrow.astro';
+import TestimonialSlide from '../../TestimonialSlide.astro';
+import { testimonials } from '../../../data/testimonials';
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section">
+  <div
+    data-slider-autoplay-duration="4"
+    aria-label="Besoins couverts et titres placés"
+    data-centered-slider="wrapper"
+    data-slider-autoplay="true"
+    class="centered-slider-group"
+  >
+    <div class="centered-slider-row">
+      <div aria-label="Diapositives" data-centered-slider="list" role="group" class="centered-slider-list">
+        {testimonials.map((testimonial) => (
+          <TestimonialSlide {...testimonial} />
+        ))}
+      </div>
+    </div>
+    <div class="container">
+      <div class="centered-slider-content">
+        <div class="centered-slider-buttons">
+          <button
+            aria-label="Diapositive précédente"
+            data-centered-slider="prev-button"
+            class="centered-slider-button is--prev"
+          >
+            <IconSliderArrow />
+          </button>
+          <button aria-label="Diapositive suivante" data-centered-slider="next-button" class="centered-slider-button">
+            <IconSliderArrow />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../../../scripts/slider';
+</script>

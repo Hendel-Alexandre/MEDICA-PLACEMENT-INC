@@ -1,0 +1,23 @@
+---
+// One weekday in the opening-hours table; src/scripts/opening-hours.ts reads the data attributes.
+import type { OpeningHoursDay } from '../data/opening-hours';
+
+type Props = OpeningHoursDay;
+
+const { day, label, time, open, close, current = false } = Astro.props;
+---
+
+<div
+  data-opening-hours-day={day}
+  data-opening-hours-open={open}
+  data-opening-hours-close={close}
+  data-opening-hours-current-day={current ? '' : undefined}
+  class="opening-hours__row"
+>
+  <div class="opening-hours__day">
+    <p class="opening-hours__p">{label}</p>
+  </div>
+  <div class="opening-hours__time">
+    <p class="opening-hours__p">{time}</p>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+---
+// Bandeau aqua entre les coordonnées et la FAQ.
+import ParallaxSection from '../../ParallaxSection.astro';
+import { photo } from '../../../data/photos';
+---
+
+<div class="container">
+  <ParallaxSection scrub={2} bolts={false} bottom={false} noMinHeight overlay="none" image={photo('clinic-bp', '')} />
+</div>

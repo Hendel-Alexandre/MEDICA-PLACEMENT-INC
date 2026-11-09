@@ -1,0 +1,73 @@
+---
+import Signet from './icons/Signet.astro';
+import { isCurrent, navLinks, site } from '../config/site';
+
+const { pathname } = Astro.url;
+const onHome = isCurrent('/', pathname);
+---
+
+<nav data-navigation-status="not-active" class="nav-full" aria-label="Navigation principale">
+  <div class="nav-full__bar">
+    <div class="nav-full__wrap">
+      <a
+        href="/"
+        class:list={['nav-full__logo', 'w-inline-block', { 'w--current': onHome }]}
+        aria-current={onHome ? 'page' : undefined}
+        aria-label="Médica Placement, accueil"
+      >
+        <Signet />
+      </a>
+      <div class="nav-full__name">
+        Médica
+        <br />
+        Placement
+      </div>
+    </div>
+    <button
+      type="button"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="nav-full-tile"
+      data-navigation-toggle="toggle"
+      class="btn-animate-chars is_nav"
+    >
+      <div class="btn-animate-chars__bg"></div>
+      <span data-button-animate-chars="" class="btn-animate-chars__text">
+        Menu
+      </span>
+      <div class="nav-full__hamburger">
+        <div class="nav-full__hamburger-bar"></div>
+        <div class="nav-full__hamburger-bar"></div>
+        <div class="nav-full__hamburger-bar"></div>
+      </div>
+    </button>
+  </div>
+  <div class="nav-full__tile" id="nav-full-tile" inert>
+    <div class="nav-full__grid">
+      <ul class="nav-full__ul">
+        {navLinks.map((link) => {
+          const current = isCurrent(link.href, pathname);
+          return (
+            <li class="nav-full__li">
+              <a
+                href={link.href}
+                class:list={['nav-full__link', 'w-inline-block', { 'is--current w--current': current }]}
+                aria-current={current ? 'page' : undefined}
+              >
+                <span data-button-animate-chars="" class="nav-full__link-text">
+                  {link.label}
+                </span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+    <div class="nav__bottom">
+      <p class="nav__word">La bonne ressource, au bon moment.</p>
+      <p class="nav__word">
+        <a href={site.phone.href}>{site.phone.display}</a>
+      </p>
+    </div>
+  </div>
+</nav>

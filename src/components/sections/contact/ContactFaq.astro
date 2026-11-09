@@ -1,0 +1,34 @@
+---
+// FAQ en accordéon (src/scripts/accordion.ts). Ancre #faq utilisée par le menu.
+import FaqItem from '../../FaqItem.astro';
+import { faqs } from '../../../data/faq';
+import '../../../styles/accordion.css';
+---
+
+<section id="faq" data-bg-section="light" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="w-layout-grid grid_12-col">
+      <div id="w-node-f246ab79-6ab5-6851-2e0b-8c7689b45f9b-b6448a21" class="grid_column full-height">
+        <div class="contact_info">
+          <div class="max-width-40">
+            <h3 class="heading-size-h4">Questions fréquentes</h3>
+          </div>
+          <div class="bolt"></div>
+        </div>
+      </div>
+      <div id="w-node-f246ab79-6ab5-6851-2e0b-8c7689b45fa1-b6448a21" class="grid_column">
+        <div data-accordion-close-siblings="true" data-accordion-css-init="" class="accordion-css">
+          <ul class="accordion-css__list">
+            {faqs.map((faq) => (
+              <FaqItem {...faq} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../../../scripts/accordion';
+</script>

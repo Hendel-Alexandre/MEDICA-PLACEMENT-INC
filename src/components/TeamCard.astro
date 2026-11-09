@@ -1,0 +1,26 @@
+---
+// Team member card: portrait, name, role and bolt.
+import type { TeamMember } from '../data/team';
+
+type Props = TeamMember;
+
+const { gridId, animate, image, eager = false, name, role } = Astro.props;
+---
+
+<div data-animate={animate} id={gridId} class="team_item">
+  <img
+    src={image.src}
+    loading={eager ? 'eager' : 'lazy'}
+    sizes={image.sizes}
+    srcset={image.srcset}
+    alt={image.alt}
+    class="img-cover"
+  />
+  <div class="team_item-bottom">
+    <div class="team_item-text">
+      <h3 class="heading-size-h5">{name}</h3>
+      <p>{role}</p>
+    </div>
+    <div class="bolt"></div>
+  </div>
+</div>

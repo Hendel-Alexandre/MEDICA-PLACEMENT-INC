@@ -1,0 +1,26 @@
+/* slider styles (custom code from the original page) */
+/* Corner squares on active slide */
+.centered-slider-slide {
+  position: relative;
+}
+.centered-slider-slide::after {
+  --size: 0.5em;
+  --gap: 0.5em;
+  --color: #95ece8;
+  content: '';
+  position: absolute;
+  inset: calc(var(--gap) * -1);
+  z-index: 1;
+  opacity: 0;
+  background:
+    linear-gradient(var(--color), var(--color)) top left / var(--size) var(--size),
+    linear-gradient(var(--color), var(--color)) top right / var(--size) var(--size),
+    linear-gradient(var(--color), var(--color)) bottom left / var(--size) var(--size),
+    linear-gradient(var(--color), var(--color)) bottom right / var(--size) var(--size);
+  background-repeat: no-repeat;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.65, 0.05, 0, 1);
+}
+.centered-slider-slide.active::after {
+  opacity: 1;
+}

@@ -1,0 +1,89 @@
+---
+import Signet from './icons/Signet.astro';
+import { footerLinks, isCurrent, site } from '../config/site';
+
+const { pathname } = Astro.url;
+const onHome = isCurrent('/', pathname);
+// The `w-node-*` ids are kept from the original export: site.css uses them for grid placement.
+---
+
+<footer data-bg-section="light" data-theme-section="light" class="footer">
+  <div class="footer-layout">
+    <div class="container">
+      <div class="w-layout-grid grid_12-col">
+        <a
+          aria-label="Retour à l’accueil"
+          id="w-node-a321751e-d326-24fb-adbb-cf225c8600f3-5c8600ef"
+          href="/"
+          class:list={['footer-full__logo', 'w-inline-block', { 'w--current': onHome }]}
+          aria-current={onHome ? 'page' : undefined}
+        >
+          <Signet />
+        </a>
+        <div id="w-node-a321751e-d326-24fb-adbb-cf225c8600f5-5c8600ef" class="col">
+          <ul class="footer__ul">
+            {footerLinks.map((link) => {
+              const current = isCurrent(link.href, pathname);
+              return (
+                <li class="footer__li">
+                  <a
+                    href={link.href}
+                    class:list={['footer__link', 'w-inline-block', { 'w--current': current }]}
+                    aria-current={current ? 'page' : undefined}
+                  >
+                    <span data-button-animate-chars="" class="footer__link-txt">
+                      {link.label}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div id="w-node-a321751e-d326-24fb-adbb-cf225c86010b-5c8600ef" class="col footer-last">
+          <div class="col_contact">
+            <p>
+              Centrale de répartition
+              <br />
+              <br />
+              Disponible 24/7
+              <br />
+              Pour toute demande de personnel ou de remplacement.
+              <br />
+              <a href={site.phone.href}>{site.phone.display}</a>
+            </p>
+          </div>
+          <div class="bolt"></div>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div data-fit-width="" class="footer-text-display">
+          Médica Placement
+        </div>
+      </div>
+      <div class="w-layout-grid grid_12-col">
+        <div id="w-node-a321751e-d326-24fb-adbb-cf225c860119-5c8600ef" class="col">
+          <p class="footer-link">Votre partenaire en placement de personnel de santé au Québec</p>
+        </div>
+        <div id="w-node-a321751e-d326-24fb-adbb-cf225c86011c-5c8600ef" class="col">
+          <a data-button-animate-chars="" href="/confidentialite" class="footer-link">
+            Confidentialité
+          </a>
+        </div>
+        <div id="w-node-a321751e-d326-24fb-adbb-cf225c86011f-5c8600ef" class="col footer-last">
+          <a data-button-animate-chars="" href="/mentions-legales" class="footer-link">
+            Mentions légales
+          </a>
+          <div data-current-year="" class="footer-link">
+            2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bg">
+    <div data-wf--image-element--variant="auto" class="img-wrap">
+      <img loading="lazy" src="/images/medica-footer-bg.webp" alt="" class="img-cover" />
+    </div>
+  </div>
+</footer>

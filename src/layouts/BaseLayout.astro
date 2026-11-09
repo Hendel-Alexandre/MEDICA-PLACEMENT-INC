@@ -1,0 +1,88 @@
+---
+import '../styles/normalize.css';
+import '../styles/webflow.css';
+import '../styles/site.css';
+import '../styles/fonts.css';
+import '../styles/ix.css';
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../config/site';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Path of a local image in /public used for social sharing. */
+  ogImage?: string;
+  noindex?: boolean;
+  /** Structured data rendered as JSON-LD. */
+  jsonLd?: Record<string, unknown>;
+}
+
+const { title, description, ogImage, noindex = false, jsonLd } = Astro.props;
+// Domaine définitif à fournir via SITE_URL : sans lui, ni URL canonique ni URL absolue d’image.
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).href.replace(/(.)\/$/, '$1') : undefined;
+const ogImageUrl = ogImage && Astro.site ? new URL(ogImage, Astro.site).href : ogImage;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_CA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/medica-favicon.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/medica-favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/medica-favicon-48.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/medica-webclip-180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/medica-webclip-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/images/medica-webclip.png" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <script is:inline>
+      // Same flags Webflow sets before first paint: `w-mod-js` enables the
+      // "hidden until animated" rules in ix.css, `w-mod-touch` marks touch devices.
+      (function (win, doc) {
+        const root = doc.documentElement;
+        root.className += ' w-mod-js';
+        if ('ontouchstart' in win || (win.DocumentTouch && doc instanceof win.DocumentTouch)) {
+          root.className += ' w-mod-touch';
+        }
+      })(window, document);
+    </script>
+  </head>
+  <body class="body">
+    <div class="page_wrap">
+      <Navigation />
+      <main class="page_main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <script>
+      import '../scripts/main';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+---
+// Mentions légales.
+import { orPlaceholder, site } from '../../../config/site';
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="w-layout-grid grid_12-col">
+      <div id="w-node-f4ff18ff-a0fa-3abb-260a-82bc9979b89c-3897e4af" class="grid_column">
+        <div class="bolt"></div>
+      </div>
+      <div id="w-node-f4ff18ff-a0fa-3abb-260a-82bc9979b89f-3897e4af" class="grid_column">
+        <div class="max-width-84">
+          <div class="rich-text_legal w-richtext">
+            <h3>1. Raison sociale</h3>
+            <p>
+              {site.legalName}, {site.tagline.toLowerCase()}.
+            </p>
+            <p>&zwj;</p>
+            <h3>2. Siège social</h3>
+            <p>
+              {orPlaceholder(site.address, 'ADRESSE')}
+              <br />
+              Activités de répartition et de gestion en télétravail. Aucun point de service commercial au public.
+            </p>
+            <p>&zwj;</p>
+            <h3>3. Permis et pièces détenues</h3>
+            <ul>
+              <li>
+                {site.permitNumber
+                  ? `Permis CNESST n° ${site.permitNumber}`
+                  : 'Titulaire du permis d’agence de placement de personnel délivré par la CNESST'}
+              </li>
+              <li>Police de cautionnement</li>
+              <li>Titulaire auprès de l’Autorité des marchés publics</li>
+            </ul>
+            <p>
+              Médica Placement inc. n’est pas membre de l’association ACSESS ; cette adhésion est volontaire. Elle ne
+              recrute pas de travailleurs étrangers temporaires et ne détient pas de permis ARTE.
+            </p>
+            <p>&zwj;</p>
+            <h3>4. Coordonnées</h3>
+            <p>
+              Téléphone : <a href={site.phone.href}>{site.phone.display}</a>
+              <br />
+              Courriel : {orPlaceholder(site.email, 'COURRIEL')}
+            </p>
+            <p>&zwj;</p>
+            <h3>5. Hébergeur</h3>
+            <p>{orPlaceholder(site.host, 'HÉBERGEUR')}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

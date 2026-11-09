@@ -1,0 +1,92 @@
+---
+// Bandeau plein écran avec parallaxe au défilement (src/scripts/parallax.ts) et rangées de contenu.
+// Le slot par défaut remplit la rangée du bas ; le slot « middle » remplit la rangée du milieu.
+// Avec une photo : texte blanc sur un dégradé marine (voir .is_photo dans global.css).
+// Sans photo : fond aqua de la marque, texte marine (.is_aqua).
+import type { ResponsiveImage } from '../data/insights';
+
+interface Props {
+  image?: ResponsiveImage;
+  /** Dégradé de lisibilité sur la photo : sous le texte du bas, sur toute la photo, ou aucun. */
+  overlay?: 'bottom' | 'full' | 'none';
+  /** Lissage de la parallaxe (data-parallax-scrub). */
+  scrub?: 1 | 2;
+  /** Ajoute le modificateur `is_100` au fond (bandeau d’introduction de l’accueil). */
+  tallImage?: boolean;
+  /** Deux carrés dans la rangée du haut. */
+  bolts?: boolean;
+  /** Affiche la rangée du milieu. */
+  middle?: boolean;
+  /** Affiche la rangée du bas (vide, sans conteneur, si aucun contenu n’est fourni). */
+  bottom?: boolean;
+  noMinHeight?: boolean;
+}
+
+const AQUA: ResponsiveImage = {
+  src: '/images/medica-aqua.webp',
+  srcset: '/images/medica-aqua.webp 1200w',
+  sizes: '100vw',
+  alt: '',
+};
+
+const {
+  image,
+  overlay = 'bottom',
+  scrub = 1,
+  tallImage = false,
+  bolts = true,
+  middle = false,
+  bottom = true,
+  noMinHeight = false,
+} = Astro.props;
+const photo = image ?? AQUA;
+const isPhoto = Boolean(image);
+const hasBottomContent = Astro.slots.has('default');
+---
+
+<div class:list={['parallax-fullscreen', isPhoto ? 'is_photo' : 'is_aqua', { 'no-min-height': noMinHeight }]}>
+  {bolts && (
+    <div class="parallax-top">
+      <div class="container">
+        <div class="bolt-wrap">
+          <div class="bolt" />
+          <div class="bolt" />
+        </div>
+      </div>
+    </div>
+  )}
+  {middle && (
+    <div class="parallax-middle">
+      <div class="container">
+        <slot name="middle" />
+      </div>
+    </div>
+  )}
+  {bottom &&
+    (hasBottomContent ? (
+      <div class="parallax-bottom">
+        <div class="container">
+          <slot />
+        </div>
+      </div>
+    ) : (
+      <div class="parallax-bottom" />
+    ))}
+  <div
+    data-parallax="trigger"
+    data-parallax-start="-8"
+    data-parallax-end="8"
+    data-parallax-scrub={scrub}
+    class:list={['parallax-bg', { is_100: tallImage }]}
+  >
+    <img
+      sizes={photo.sizes}
+      srcset={photo.srcset}
+      src={photo.src}
+      loading="lazy"
+      alt={photo.alt}
+      class="parallax-img"
+    />
+    {isPhoto && overlay !== 'none' && <div class:list={['medica-overlay', `is_${overlay}`]} />}
+  </div>
+</div>

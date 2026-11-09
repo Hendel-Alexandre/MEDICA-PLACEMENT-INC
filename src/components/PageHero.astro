@@ -1,0 +1,28 @@
+---
+// Two-part page heading used by the About and Contact pages (words reveal on load, see
+// aboutIntro in src/scripts/interactions.ts). Extra content goes after the spacer.
+import Spacer from './Spacer.astro';
+
+interface Props {
+  lead: string;
+  title: string;
+  spacer?: 'main' | 'xlarge';
+}
+
+const { lead, title, spacer = 'main' } = Astro.props;
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section is_hero-about">
+  <div class="container">
+    <div class="hero_layout">
+      <div class="hero_about-wrap">
+        <h1 data-animate="about">{lead}</h1>
+        <h1 data-animate="about" class="heading-size-h1 text-color_white">
+          {title}
+        </h1>
+      </div>
+    </div>
+  </div>
+  <Spacer variant={spacer} />
+  <slot />
+</section>

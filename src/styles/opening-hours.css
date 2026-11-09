@@ -1,0 +1,17 @@
+/* opening-hours styles (custom code from the original page) */
+[data-opening-hours-store-status='open'] .opening-hours__status {
+  color: #78ffb0;
+}
+[data-opening-hours-store-status='open'] .opening-hours__status .opening-hours__p.is--closed {
+  display: none;
+}
+[data-opening-hours-store-status='open'] .opening-hours__status .opening-hours__p.is--open {
+  display: block;
+}
+[data-opening-hours-current-day] {
+  background-color: rgba(149, 236, 232, 0.2);
+}
+[data-opening-hours-current-day] .opening-hours__p {
+  font-weight: 600;
+  color: #95ece8;
+}

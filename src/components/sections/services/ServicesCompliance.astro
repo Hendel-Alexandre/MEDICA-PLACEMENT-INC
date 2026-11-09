@@ -1,0 +1,28 @@
+---
+// Bandeau aqua : milieux desservis, en mots qui défilent (src/scripts/rotating-text.ts).
+import '../../../styles/rotating-text.css';
+import ParallaxSection from '../../ParallaxSection.astro';
+import { photo } from '../../../data/photos';
+---
+
+<ParallaxSection middle overlay="full" image={photo('care-knitting', '')}>
+  <Fragment slot="middle">
+    <div class="w-layout-grid grid_12-col">
+      <div id="w-node-_1f69277f-c26c-e193-e0ee-67df9c2da39a-9fc0289c" class="grid_column">
+        <h2 data-rotating-title="" class="heading-size-h4">
+          Milieux desservis :{' '}
+          <span
+            data-rotating-words="Centres hospitaliers, CISSS et CIUSSS, CHSLD publics, CHSLD privés, Résidences pour aînés, CLSC, Soins à domicile"
+            class="rotating-text__highlight"
+          >
+            Centres hospitaliers
+          </span>
+        </h2>
+      </div>
+    </div>
+  </Fragment>
+</ParallaxSection>
+
+<script>
+  import '../../../scripts/rotating-text';
+</script>

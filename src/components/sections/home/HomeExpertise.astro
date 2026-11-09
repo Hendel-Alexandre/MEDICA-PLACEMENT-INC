@@ -1,0 +1,30 @@
+---
+// Accueil : nos services, quatre cartes côte à côte (survol : src/scripts/expertise-hover.ts).
+import ExpertiseCard from '../../ExpertiseCard.astro';
+import { practiceAreas } from '../../../data/practice-areas';
+---
+
+<section id="services" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="horizontal_flex-between services-head">
+      <h2 data-animate="typo">Nos services</h2>
+      <div class="footer_l_ink-wrap">
+        <a href="/services" class="footer__link w-inline-block">
+          <span data-button-animate-chars="" class="footer__link-txt">
+            Découvrir nos services
+          </span>
+        </a>
+        <div class="footer__link-underline is_light"></div>
+      </div>
+    </div>
+    <div class="services-row">
+      {practiceAreas.map((area) => (
+        <ExpertiseCard {...area} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../../../scripts/expertise-hover';
+</script>

@@ -1,0 +1,128 @@
+/* Hide animated elements until the GSAP interactions are ready (html.w-mod-ix3 is added by src/scripts/interactions.ts) */
+html.w-mod-js:not(.w-mod-ix3) :is([data-fit-width]) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3)
+  :is(
+    [data-fit-width],
+    [data-animate='about'],
+    [data-animate='bolt'],
+    [data-animate='sub'],
+    [data-animate='team-01'],
+    [data-animate='team-02'],
+    [data-animate='team-03']
+  ) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3)
+  :is(
+    [data-fit-width],
+    [data-animate='service-01'],
+    [data-animate='sub-1'],
+    [data-animate='sub-2'],
+    [data-animate='sub-12'],
+    [data-animate='sub-22'],
+    [data-animate='bolt']
+  ) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='typo']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='typo']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='about']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='about']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='bolt']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='bolt']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-01']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-01']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-02']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-02']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-03']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='team-03']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='service-01']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='service-01']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-1']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-1']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-2']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-2']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-12']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-12']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-22']) {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3):is([data-animate='sub-22']) * {
+  visibility: hidden !important;
+}
+html.w-mod-js:not(.w-mod-ix3)
+  :is(
+    [data-wf-component-id='a321751e-d326-24fb-adbb-cf225c8600ef']:is([data-fit-width]),
+    [data-wf-component-id='a321751e-d326-24fb-adbb-cf225c8600ef'] :is([data-fit-width]),
+    .preloader_signet,
+    .bolt.preloader_01,
+    .bolt.preloader_02,
+    .bolt.preloader_03,
+    .bolt.preloader_04,
+    .hero_heading,
+    .hero_img-wrap,
+    .hero_heading-wrap,
+    .hero_bottom .hero_bottom-txt,
+    [data-animate='typo'],
+    [data-animate='about'],
+    [data-animate='bolt'],
+    [data-animate='sub'],
+    [data-animate='team-01'],
+    [data-animate='team-02'],
+    [data-animate='team-03'],
+    [data-animate='service-01'],
+    [data-animate='sub-1'],
+    [data-animate='sub-2'],
+    [data-animate='sub-12'],
+    [data-animate='sub-22']
+  ) {
+  visibility: hidden !important;
+}

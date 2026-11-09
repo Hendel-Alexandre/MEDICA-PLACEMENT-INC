@@ -1,0 +1,23 @@
+---
+// Key-figure row on the About page. The number rolls up from 0 via src/scripts/odometer.ts.
+import type { Stat } from '../data/stats';
+
+type Props = Stat;
+
+const { ids, value, text } = Astro.props;
+---
+
+<div class="service_item is_small">
+  <div class="w-layout-grid grid_12-col">
+    <div data-odometer-group="" id={ids[0]} class="grid_column">
+      <h3 data-odometer-duration="2" data-odometer-element="" data-odometer-start="0" class="odometer-h1">
+        {value}
+      </h3>
+    </div>
+    <div id={ids[1]} class="grid_column">
+      <div class="max-width-57">
+        <p class="text-size-medium text-color_white">{text}</p>
+      </div>
+    </div>
+  </div>
+</div>

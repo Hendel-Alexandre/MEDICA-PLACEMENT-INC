@@ -1,0 +1,25 @@
+---
+// Accordion item (src/scripts/accordion.ts toggles data-accordion-status; animation is in accordion.css).
+import IconArrowDiagonal from './icons/IconArrowDiagonal.astro';
+import type { Faq } from '../data/faq';
+
+type Props = Faq;
+
+const { question, answer } = Astro.props;
+---
+
+<li data-accordion-status="not-active" class="accordion-css__item">
+  <div data-hover="" data-accordion-toggle="" class="accordion-css__item-top">
+    <h3 class="accordion-css__item-h3">{question}</h3>
+    <div class="accordion-css__item-icon">
+      <IconArrowDiagonal />
+    </div>
+  </div>
+  <div class="accordion-css__item-bottom">
+    <div class="accordion-css__item-bottom-wrap">
+      <div class="accordion-css__item-bottom-content">
+        <p class="accordion-css__item-p">{answer}</p>
+      </div>
+    </div>
+  </div>
+</li>

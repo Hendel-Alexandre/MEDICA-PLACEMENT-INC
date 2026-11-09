@@ -1,0 +1,17 @@
+---
+// Bandeau plein écran : positionnement de l’agence.
+import ParallaxSection from '../../ParallaxSection.astro';
+import { photo } from '../../../data/photos';
+---
+
+<ParallaxSection
+  tallImage
+  image={photo('care-team', 'Une équipe souriante d’infirmières et de médecins dans un hôpital.')}
+>
+  <div class="max-width-78">
+    <p data-animate="typo" class="text-size-xlarge">
+      Votre partenaire en placement de personnel de santé au Québec. Des équipes qualifiées pour répondre à vos besoins,
+      avec une répartition disponible 24/7.
+    </p>
+  </div>
+</ParallaxSection>

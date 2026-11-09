@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Preloader from '../components/Preloader.astro';
+import HomeHero from '../components/sections/home/HomeHero.astro';
+import HomeIntro from '../components/sections/home/HomeIntro.astro';
+import HomeExpertise from '../components/sections/home/HomeExpertise.astro';
+import HomeTeamTeaser from '../components/sections/home/HomeTeamTeaser.astro';
+import HomeInsights from '../components/sections/home/HomeInsights.astro';
+import { organizationJsonLd } from '../data/structured-data';
+
+const description =
+  'Dotation d’infirmières, d’infirmières auxiliaires et de PAB. Remplacement 24/7, assignations contractuelles, transport vers les milieux de soins. Permis CNESST.';
+---
+
+<BaseLayout
+  title="Médica Placement inc. | Agence de placement de personnel de la santé au Québec"
+  description={description}
+  ogImage="/images/medica-og.jpg"
+  jsonLd={organizationJsonLd(Astro.site)}
+>
+  <Preloader />
+  <HomeHero />
+  <HomeIntro />
+  <HomeExpertise />
+  <HomeTeamTeaser />
+  <HomeInsights />
+</BaseLayout>

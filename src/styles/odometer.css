@@ -1,0 +1,22 @@
+/* odometer styles (custom code from the original page) */
+[data-odometer-element] {
+  display: inline-flex;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+}
+[data-odometer-part='mask'],
+[data-odometer-part='static'] {
+  display: inline-block;
+  overflow: clip;
+  padding: 0em;
+  margin: 0em;
+}
+[data-odometer-part='roller'] {
+  display: block;
+  white-space: pre;
+  text-align: center;
+  will-change: transform;
+}
+[data-odometer-part='static'] {
+  display: inline-block;
+}

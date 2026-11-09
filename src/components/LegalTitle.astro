@@ -1,0 +1,18 @@
+---
+// Title block of the Privacy Policy and Legal Notice pages.
+import Spacer from './Spacer.astro';
+
+interface Props {
+  title: string;
+  extraPadding?: boolean;
+}
+
+const { title, extraPadding = false } = Astro.props;
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section no-padding_bottom">
+  <Spacer />
+  <div class="container">
+    <h1 class:list={['heading-size-h1', { 'extra-padding': extraPadding }]}>{title}</h1>
+  </div>
+</section>

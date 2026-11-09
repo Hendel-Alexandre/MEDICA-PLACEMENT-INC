@@ -1,0 +1,36 @@
+---
+// Carte de service de l’accueil : photo, numéro, flèche et titre. Au survol, la carte se remplit
+// et la liste des services apparaît sur la photo (src/scripts/expertise-hover.ts).
+import IconArrowDiagonal from './icons/IconArrowDiagonal.astro';
+import { photo } from '../data/photos';
+import type { PracticeArea } from '../data/practice-areas';
+
+type Props = PracticeArea;
+
+const { number, title, description, services, image, alt } = Astro.props;
+const img = photo(image, alt, '(max-width: 479px) 90vw, (max-width: 991px) 45vw, 22vw');
+---
+
+<article class="expertise_item service-card">
+  <div class="service-card__media">
+    <img src={img.src} srcset={img.srcset} sizes={img.sizes} alt={img.alt} loading="lazy" class="img-cover" />
+  </div>
+  <div class="expertise_overlay"></div>
+  <div class="service-card__body">
+    <div class="expertise_item-top">
+      <div>{number}</div>
+      <div class="expertise_icon">
+        <IconArrowDiagonal />
+      </div>
+    </div>
+    <h3 class="heading-size-h4 is_expertise">{title}</h3>
+    <p class="service-card__text">{description}</p>
+  </div>
+  <div role="list" class="expertise_item-left service-card__list">
+    {services.map((service) => (
+      <div role="listitem" class="expertise_list-item">
+        <p class="text-size-medium">{service}</p>
+      </div>
+    ))}
+  </div>
+</article>

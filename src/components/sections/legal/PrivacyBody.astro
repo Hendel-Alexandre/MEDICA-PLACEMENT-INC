@@ -1,0 +1,64 @@
+---
+// Politique de confidentialité (Loi 25).
+import { orPlaceholder, site } from '../../../config/site';
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="w-layout-grid grid_12-col">
+      <div id="w-node-f4ff18ff-a0fa-3abb-260a-82bc9979b89c-6bfbca1c" class="grid_column">
+        <div class="bolt"></div>
+      </div>
+      <div id="w-node-f4ff18ff-a0fa-3abb-260a-82bc9979b89f-6bfbca1c" class="grid_column">
+        <div class="max-width-84">
+          <div class="rich-text_legal w-richtext">
+            <p>
+              Cette politique s’applique aux renseignements personnels recueillis par Médica Placement inc.,
+              conformément à la Loi sur la protection des renseignements personnels dans le secteur privé du Québec,
+              telle que modifiée par la Loi 25.
+            </p>
+            <p>&zwj;</p>
+            <h3>1. Responsable</h3>
+            <p>
+              {site.legalName}
+              <br />
+              {orPlaceholder(site.address, 'ADRESSE')}
+              <br />
+              {orPlaceholder(site.email, 'COURRIEL')}
+            </p>
+            <p>&zwj;</p>
+            <h3>2. Renseignements recueillis</h3>
+            <ul>
+              <li>Identité et coordonnées</li>
+              <li>Titre d’emploi, numéro d’ordre professionnel et certifications</li>
+              <li>Disponibilités et CV</li>
+              <li>Antécédents judiciaires, lorsque le candidat y consent</li>
+              <li>Besoins de l’établissement qui dépose une demande</li>
+            </ul>
+            <p>&zwj;</p>
+            <h3>3. Finalités</h3>
+            <p>Recrutement, vérification, affectation, paie, facturation et transport.</p>
+            <p>&zwj;</p>
+            <h3>4. Durée de conservation</h3>
+            <p>
+              Le temps du dossier de candidature ou du contrat, puis selon les obligations fiscales et de santé et de
+              sécurité du travail.
+            </p>
+            <p>&zwj;</p>
+            <h3>5. Vos droits</h3>
+            <p>
+              Vous pouvez demander l’accès à vos renseignements et leur rectification en écrivant au responsable. Vous
+              pouvez aussi porter plainte auprès de la Commission d’accès à l’information du Québec.
+            </p>
+            <p>&zwj;</p>
+            <h3>6. Témoins et suivi</h3>
+            <p>Ce site n’utilise aucun traceur publicitaire ni témoin de suivi.</p>
+            <p>&zwj;</p>
+            <h3>7. Hébergement</h3>
+            <p>{orPlaceholder(site.host, 'HÉBERGEUR')}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

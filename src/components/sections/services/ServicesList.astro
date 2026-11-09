@@ -1,0 +1,15 @@
+---
+// Practice areas on the Services page.
+import ServiceItem from '../../ServiceItem.astro';
+import { serviceAreas } from '../../../data/services';
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="service_item-list">
+      {serviceAreas.map((area) => (
+        <ServiceItem {...area} />
+      ))}
+    </div>
+  </div>
+</section>

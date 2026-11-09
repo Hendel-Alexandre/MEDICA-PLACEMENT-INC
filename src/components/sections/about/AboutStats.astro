@@ -1,0 +1,27 @@
+---
+// Key figures with the number odometer (src/scripts/odometer.ts).
+import StatRow from '../../StatRow.astro';
+import { stats } from '../../../data/stats';
+import '../../../styles/odometer.css';
+---
+
+<section data-bg-section="light" data-theme-section="light" class="section">
+  <div class="container">
+    <div class="w-layout-grid grid_12-col">
+      <div id="w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a87-a6a0f880" class="grid_column">
+        <div class="bolt"></div>
+      </div>
+      <div id="w-node-_703d0e41-a74b-1d30-0676-bc64bdb99a89-a6a0f880" class="grid_column">
+        <div class="service_item-list">
+          {stats.map((stat) => (
+            <StatRow {...stat} />
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../../../scripts/odometer';
+</script>

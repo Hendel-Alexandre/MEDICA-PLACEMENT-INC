@@ -1,0 +1,23 @@
+---
+// Bandeau plein écran : la centrale de répartition.
+import ParallaxSection from '../../ParallaxSection.astro';
+import { photo } from '../../../data/photos';
+---
+
+<ParallaxSection image={photo('phone-call', 'Une professionnelle de la santé tient un téléphone.')}>
+  <div class="horizontal_flex-between">
+    <div class="max-width-100">
+      <h2 data-animate="typo" class="heading-size-h2">
+        Une répartition fiable, jour et nuit.
+      </h2>
+    </div>
+    <div class="footer_l_ink-wrap">
+      <a href="/contact" class="footer__link w-inline-block">
+        <span data-button-animate-chars="" class="footer__link-txt">
+          Contacter la répartition
+        </span>
+      </a>
+      <div class="footer__link-underline is_light"></div>
+    </div>
+  </div>
+</ParallaxSection>

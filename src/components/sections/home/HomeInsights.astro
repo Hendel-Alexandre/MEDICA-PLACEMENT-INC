@@ -1,0 +1,34 @@
+---
+// Accueil : les trois portes (établissements, professionnels, conformité) avec le curseur texte.
+import '../../../styles/cursor.css';
+import InsightCard from '../../InsightCard.astro';
+import Spacer from '../../Spacer.astro';
+import { insights } from '../../../data/insights';
+---
+
+<section id="portes" data-theme-section="light" class="section">
+  <div class="container">
+    <h2 data-animate="typo" class="heading-size-h2 extra-padding">
+      Établissements et professionnels
+    </h2>
+    <Spacer variant="xsmall" />
+    <div data-cursor="" class="cursor" aria-hidden="true">
+      <div class="cursor-bubble">
+        <span data-cursor-text-target="" class="cursor-bubble__text">
+          En savoir plus
+        </span>
+      </div>
+    </div>
+    <div class="w-layout-grid grid_12-col">
+      {insights.map(({ gridId, ...insight }) => (
+        <div id={gridId} class="grid_column">
+          <InsightCard {...insight} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../../../scripts/cursor';
+</script>

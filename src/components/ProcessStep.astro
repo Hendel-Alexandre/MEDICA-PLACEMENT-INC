@@ -1,0 +1,26 @@
+---
+// Numbered step on the Services page: number, title and description columns.
+import type { ProcessStep } from '../data/process';
+
+type Props = ProcessStep;
+
+const { ids, number, title, text } = Astro.props;
+---
+
+<div class="service_item">
+  <div class="w-layout-grid grid_12-col mobile-gap-small">
+    <div id={ids[0]} class="grid_column">
+      <div class="heading-size-h1">{number}</div>
+    </div>
+    <div id={ids[1]} class="grid_column">
+      <div class="max-width-cta">
+        <h3 class="heading-size-h4">{title}</h3>
+      </div>
+    </div>
+    <div id={ids[2]} class="grid_column">
+      <div class="max-width-57">
+        <p class="text-color_white">{text}</p>
+      </div>
+    </div>
+  </div>
+</div>

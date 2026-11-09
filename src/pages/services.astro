@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicesHero from '../components/sections/services/ServicesHero.astro';
+import ServicesList from '../components/sections/services/ServicesList.astro';
+import ServicesCompliance from '../components/sections/services/ServicesCompliance.astro';
+import ServicesTestimonials from '../components/sections/services/ServicesTestimonials.astro';
+import ServicesKnowledge from '../components/sections/services/ServicesKnowledge.astro';
+import ServicesProcess from '../components/sections/services/ServicesProcess.astro';
+---
+
+<BaseLayout
+  title="Services : recrutement, placement, logistique, répartition | Médica Placement inc."
+  description="Les quatre piliers de Médica Placement : qualification clinique avant l’affectation, placement d’urgence et contractuel, transport des professionnels, répartition et paie."
+>
+  <ServicesHero />
+  <ServicesList />
+  <ServicesCompliance />
+  <ServicesTestimonials />
+  <ServicesKnowledge />
+  <ServicesProcess />
+</BaseLayout>

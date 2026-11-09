@@ -1,0 +1,18 @@
+---
+// One slide of the centred testimonial slider (src/scripts/slider.ts).
+import type { Testimonial } from '../data/testimonials';
+
+type Props = Testimonial;
+
+const { quote, name, detail } = Astro.props;
+---
+
+<div data-centered-slider="slide" class="centered-slider-slide">
+  <div class="centered-slider-slide__inner">
+    <p class="slide-demo__description">{quote}</p>
+    <div class="slide-demo__details">
+      <span class="slide-demo__eyebrow">{name}</span>
+      <span class="slide-demo__eyebrow is_second">{detail}</span>
+    </div>
+  </div>
+</div>
