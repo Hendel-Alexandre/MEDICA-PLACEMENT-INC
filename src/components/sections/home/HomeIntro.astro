@@ -1,13 +1,22 @@
 ---
-// Bandeau plein écran : positionnement de l’agence.
+// Bandeau plein écran : positionnement de l’agence, centré sur une photo avec voile bleu.
 import ParallaxSection from '../../ParallaxSection.astro';
+import { photo } from '../../../data/photos';
 ---
 
-<ParallaxSection white>
-  <div class="max-width-78">
-    <p data-animate="typo" class="text-size-xlarge">
-      Votre partenaire en placement de personnel de santé au Québec. Du personnel qualifié pour répondre à vos besoins,
-      et une équipe qui vous répond 24/7.
-    </p>
-  </div>
+<ParallaxSection
+  middle
+  overlay="brand"
+  image={photo('scrubs', 'Une personne en uniforme médical bleu, stéthoscope au cou.')}
+>
+  <Fragment slot="middle">
+    <div class="intro-center">
+      <p data-animate="typo" class="intro-center__lead">
+        Votre partenaire en placement de personnel de santé au Québec.
+      </p>
+      <p data-animate="typo" class="intro-center__sub">
+        Du personnel qualifié pour répondre à vos besoins, et une équipe qui vous répond 24/7.
+      </p>
+    </div>
+  </Fragment>
 </ParallaxSection>

@@ -8,8 +8,8 @@ import type { ResponsiveImage } from '../data/insights';
 
 interface Props {
   image?: ResponsiveImage;
-  /** Dégradé de lisibilité sur la photo : sous le texte du bas, sur toute la photo, ou aucun. */
-  overlay?: 'bottom' | 'full' | 'none';
+  /** Dégradé de lisibilité sur la photo : sous le texte du bas, sur toute la photo, voile bleu de la marque, ou aucun. */
+  overlay?: 'bottom' | 'full' | 'brand' | 'none';
   /** Lissage de la parallaxe (data-parallax-scrub). */
   scrub?: 1 | 2;
   /** Ajoute le modificateur `is_100` au fond (bandeau d’introduction de l’accueil). */

@@ -72,8 +72,9 @@ non obligatoire). Fichiers : `public/images/medica-photo-<nom>-<1080|2000>.webp`
 | nurse-masks   | Accueil, carte Conformité                                | images.unsplash.com/photo-1691139601099-932c01ec198b |
 | nurses-duo    | Accueil, service Recrutement                             | images.unsplash.com/photo-1736289162890-78f1ff4f8bd3 |
 | nurse-bedside | Accueil, service Placement ; À propos, profil infirmière | images.unsplash.com/photo-1749065312519-1902cb8431ae |
-| walker-help   | Accueil, service Transport ; À propos, profil PAB       | images.unsplash.com/photo-1773227055624-07b515ba87c5 |
-| team-corridor | Accueil, service Service 24/7                           | images.unsplash.com/photo-1516841273335-e39b37888115 |
+| walker-help   | Accueil, service Transport ; À propos, profil PAB        | images.unsplash.com/photo-1773227055624-07b515ba87c5 |
+| team-corridor | Accueil, service Service 24/7                            | images.unsplash.com/photo-1516841273335-e39b37888115 |
+| scrubs        | Accueil, bandeau d’introduction                          | images.unsplash.com/photo-1666887360921-85952a86894f |
 | care-knitting | Services, milieux desservis                              | images.unsplash.com/photo-1762955911769-d652ceaa94bb |
 | care-coloring | Services, transport                                      | images.unsplash.com/photo-1762955911431-4c44c7c3f408 |
 | aide-bp       | À propos, profil infirmière auxiliaire                   | images.unsplash.com/photo-1631815590058-860e4f83c1e8 |

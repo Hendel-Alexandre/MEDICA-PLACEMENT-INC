@@ -312,6 +312,38 @@ svg {
 .medica-overlay.is_full {
   background: rgba(23, 12, 82, 0.55);
 }
+/* Voile bleu de la marque : royal en haut, marine en bas. */
+.medica-overlay.is_brand {
+  background: linear-gradient(180deg, rgba(0, 38, 155, 0.72) 0%, rgba(23, 12, 82, 0.82) 100%);
+}
+
+/* Accueil : texte d’introduction centré sur la photo. */
+.intro-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  max-width: 64em;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+.intro-center__lead {
+  max-width: 20ch;
+  margin: 0;
+  font-size: clamp(2em, 4.6vw, 4.25em);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.intro-center__sub {
+  max-width: 38ch;
+  text-wrap: balance;
+  margin: 0;
+  font-size: clamp(1.15em, 1.9vw, 1.75em);
+  line-height: 1.4;
+  color: var(--periwinkle);
+}
 
 /* --------------------------------- Médica : cartes « Nos services » --------------------------------- */
 .services-head {
